@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% load static %}
+
+<head>{% block base_head %}
+    <link rel="stylesheet" href="{% static 'css/main.css' %}" >
+<title>{{ title }}</title>
+<h1>Hello, world!</h1>
+
+{% endblock %}
+</head>
+<body>
+   
+  {% block content %}
+  <div class='container'>{{ content }}</div>
+  <div class='col-sm-6 col-12'>
+  <form method="POST">
+      {% csrf_token %}
+     {{ form }}
+     <button type="submit">submit</button>
+  </form>
+  </div>
+
+
+
+{% endblock %}
+
+<!doctype html>
+<html lang="en">
+
+</html>
